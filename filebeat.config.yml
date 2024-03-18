@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: filebeat-config
 data:
-  filebeat.yml: 
+  filebeat.yml: |
     filebeat.inputs:
     - type: container
       paths:
