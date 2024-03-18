@@ -11,6 +11,8 @@ data:
       processors:
         - add_kubernetes_metadata:
             in_cluster: true
-    output.opensearch:
+    output.elasticsearch:
       hosts: ["http://10.20.18.102:9200"]
       index: "kube-logs"
+    setup.template.name: "filebeat"
+    setup.template.pattern: "filebeat-*"
