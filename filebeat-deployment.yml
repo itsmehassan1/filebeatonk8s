@@ -1,8 +1,9 @@
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: filebeat
 spec:
+  replicas: 1  # Specifies that only one pod should be created
   selector:
     matchLabels:
       name: filebeat
